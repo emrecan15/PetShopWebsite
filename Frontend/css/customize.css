@@ -1,0 +1,248 @@
+.card {
+    overflow: hidden; /* Taşan içerik gizlenir */
+    border-radius: 10px;
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Kartın gölgesi */
+}
+
+.card img {
+    width: 100%; /* Resimlerin kart içinde düzgün yerleşmesi için */
+    height: auto; /* Orantıyı korur */
+}
+
+.card-body {
+    padding: 1rem;
+    background-color: white;
+}
+
+.product-section {
+   background-color: #fafafa;
+    background-size: cover; /* Resmi kapsayacak şekilde ölçeklendirir */
+    background-repeat: no-repeat; /* Resmin tekrarlanmasını engeller */
+    background-position: center center; /* Resmi ortalar */
+    background-attachment: fixed; /* Arka plan resmini sabitler */
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Kartları yatayda ortalar */
+}
+
+.product-card img {
+    width: 310px; /* Resimlerin genişliğini ayarlar */
+    height: 283px; /* Resimlerin yüksekliğini ayarlar */
+    object-fit: cover; /* Resmin kartın boyutlarına sığmasını sağlar */
+    border-radius: 10px; /* Köşeleri yuvarlat */
+    background-color: #ffffff;
+    
+}
+
+
+.quantity-input{
+    width: 60px;
+    height: 60px;
+}
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls .btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    background-color: #c0b07a; /* Miktar göstergesinin arka plan rengiyle aynı */
+    color: white; /* Yazı rengini beyaz yap */
+    border: none; /* Kenarlıkları kaldır */
+    border-radius: 50%; /* Yuvarlak kenarlar */
+}
+
+.quantity-controls .badge {
+    font-size: 16px;
+    padding: 0.5em 0.75em;
+    
+    color: white; /* Yazı rengini beyaz yap */
+}
+
+
+.offcanvas.offcanvas-end {
+    width: 400px; /* Varsayılan genişlikten daha geniş bir değer belirleyin */
+}
+
+@media (min-width: 768px) {
+    .offcanvas.offcanvas-end {
+        width: 500px; /* Daha büyük ekranlar için genişliği artırın */
+    }
+}
+
+
+.btn-removeCart{
+    background-color: #c0b07a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    
+}
+.btn-removeCart:hover{
+    background-color: #cac2a7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-cart {
+    transition: background-color 0.5s, color 0.5s; 
+}
+.btn-cart:hover{
+    background-color: rgb(238, 238, 238);
+    color: white;
+    transition: background-color 0.5s, color 0.5s; 
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-group-item .text-body-secondary {
+    align-self: center; /* Dikeyde ortalar */
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Kartları sola hizalar */
+    margin-top: 5px;
+    
+}
+
+.product-card {
+    flex: 1 1 calc(25% - 1rem); /* Kartların genişliğini ayarlar ve boşluk bırakır */
+    box-sizing: border-box; /* Kenar boşluklarını dahil eder */
+    margin-bottom: 1rem; /* Alt boşluk */
+}
+
+@media (max-width: 1200px) {
+    .product-card {
+        flex: 1 1 calc(25% - 1rem); /* Daha büyük ekranlar için genişlik ayarı */
+    }
+}
+
+@media (max-width: 992px) {
+    .product-card {
+        flex: 1 1 calc(33.333% - 1rem); /* Daha küçük ekranlar için genişlik ayarı */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(50% - 1rem); /* Daha küçük ekranlar için genişlik ayarı */
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card {
+        flex: 1 1 100%; /* En küçük ekranlar için genişlik ayarı */
+    }
+}
+
+
+/* FILTER SECTION */
+.filter-section {
+    background-color: #d6d6d6f3;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.filter-section h4 {
+    margin-bottom: 1rem;
+}
+
+.filter-section .form-label {
+    font-weight: bold;
+    background-color: gray;
+}
+
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
+.page-item {
+    margin: 0 0.25rem;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
+.page-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.motto{
+    padding: 1.5rem;
+    height: auto;
+}
+
+
+/* filepath: c:\Users\emrec\Desktop\website\bettAqua\css\customize.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.price-font {
+    font-family: 'Montserrat', sans-serif;
+    color:#e96020;
+    font-size: 1.1rem;
+    -webkit-font-smoothing: antialiased; /* Metni daha keskin yapar */
+    -moz-osx-font-smoothing: grayscale; /* Metni daha keskin yapar */
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.1); /* Hafif gölge ekler */
+}
+
+/* filepath: c:\Users\emrec\Desktop\website\bettAqua\css\customize.css */
+.star-icon {
+    color: #e96020; /* Altın sarısı renk */
+}
+
+.star-icon.empty {
+    color: #D3D3D3; /* Açık gri renk */
+}
+.rating
+{
+    color:black;
+}
+
